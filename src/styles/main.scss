@@ -1,0 +1,198 @@
+@import "other/mixins";
+html, body{
+    height: 100%;
+}
+input[type='text']{
+    height: 32px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: none;
+    border: 1px solid map-get($colors, border );
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+
+
+.mainWrapper { 
+    overflow: hidden;
+    margin: 0 auto;
+    width: 1360px;
+    font-family: "Roboto", "Arial";
+    background: map-get($colors, bg);
+    color: map-get($colors, text);
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+	header { 
+        background: #fff;
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        $bh: 32px;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+        .button{
+            height: $bh;
+            width: $bh;
+            background: map-get($colors, pink);
+        }
+        .leftButtons{
+            min-width: 72px;
+            margin-right: 10px;
+            .burgerMenu { 
+                .button { 
+    
+                }
+            }
+        }
+
+		.title { 
+            display: flex;
+            flex: 0 1 680px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            height: $bh;
+            background: map-get($colors, pink);
+            font-weight: 500;
+            font-size: 15px;
+            margin-left: auto;
+            margin-right: auto;
+		}
+
+		.rightButtons { 
+            display: flex;
+            flex: 0 0 auto;
+            margin-left: 10px;
+            .button{
+                &:not(:last-child){
+                    margin-right: 8px;
+                }
+            }
+		}
+	}
+
+	.content { 
+
+		#usersGrid { 
+
+            .row{
+                display: flex;
+                padding: 4px 8px;
+                .col{
+                    padding: 0 8px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            select{
+                font-size: 11px;
+                line-height: 16px;
+                
+            }
+            .select2{
+                font-size: 11px;
+                line-height: 16px;
+            }
+            .colCheckbox{
+                flex: 0 0 16px;
+            }
+            .colId{
+                flex: 0 0 112px;
+            }
+            .colMail{
+                flex: 0 0 192px;
+            }
+            .colRole{
+                flex: 0 0 160px;
+            }
+            .colRoom{
+                flex: 1 1 100%;
+            }
+			.header { 
+                font-size: 12px;
+                min-height: 48px;
+                font-weight: 500;
+                border-bottom: 1px solid map-get($colors, border );
+				.col { 
+                    .exp{
+                        background: #fff;
+                        border-radius: 2px;
+                        width: 16px;
+                        height: 16px;
+                        border: 1px solid map-get($colors, border );
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        .plus{
+                            position: relative;
+                            width: 10px;
+                            height: 2px;
+                            background-color: #404040;
+                            &:after{
+                                background-color: #404040;
+                                content: "";
+                                width: 10px;
+                                height: 2px;
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                                transition: all 0.2s ease;
+                            }
+                        }
+                        &:hover{
+                            .plus:after{
+                                transform: translate(-50%, -50%) rotate(-90deg);
+                            }
+                        }
+                    }
+				}
+			}
+
+			.items { 
+                margin-bottom: 30px;
+                font-weight: 400;
+                .colId{
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+				.item { 
+                    border-bottom: 1px solid map-get($colors, border );
+					.col { 
+
+						input { 
+
+						}
+
+						.checkedItemBorder { 
+
+						}
+					}
+				}
+			}
+		}
+    }
+    footer{
+        padding: 8px;
+        background: #fff;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+        margin-top: auto;
+        display: flex;
+        justify-content: flex-end;
+        .button{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: map-get($colors , headerIcons);
+            color: #fff;
+            text-transform: uppercase;
+            height: 32px;
+            border-radius: 4px;
+            margin-left: 8px;
+            padding: 0 22px;
+        }
+    }
+}

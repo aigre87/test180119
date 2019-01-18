@@ -1,0 +1,56 @@
+@import "other/mixins";
+.custom-checkbox{
+    user-select: none;
+    cursor: pointer;
+    position:relative;
+    display:inline-block;
+  }
+  .ie8 .custom-checkbox{
+    zoom:1;
+  }
+  .custom-checkbox>.box{
+    cursor: pointer;
+    position:relative;
+    display:block;
+    width:14px;
+    height:14px;
+    border:1px solid map-get($colors, border);
+    background-color:#fff;
+    border-radius:3px;
+  }
+  .custom-checkbox>.box>.tick{
+    position:absolute;
+    left:2px;
+    top: -1px;
+    width: 11px;
+    height: 7px;
+    border-bottom:2px solid map-get($colors, text);
+    border-left:2px solid map-get($colors, text);
+    transform:rotate(-45deg);
+    display:none;
+  }
+  .oldie .custom-checkbox>.box>.tick{
+    left:1px;
+    top:-5px;
+    zoom:1;
+  }
+  .custom-checkbox>input:checked+.box>.tick{
+    display:block;
+  }
+  .custom-checkbox.checked>.box>.tick{
+    display:block;
+  }
+  .custom-checkbox>input{
+    cursor: pointer;
+    position:absolute;
+    outline:none;
+    left:0;
+    top:0;
+    padding:0;
+    width:16px;
+    height:16px;
+    border:none;
+    margin:0;
+    opacity:0;
+    z-index:1;
+  }
