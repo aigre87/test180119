@@ -28,7 +28,7 @@ var path = {
     build: {
         js:            'build/js/',
         styles:        'build/css/',
-        images:        'build/images/',
+        images:        'build/images/',≠–
         fonts:         'build/fonts/',
         libs:          'build/libs/',
         html:          'build/index.html'
@@ -75,8 +75,9 @@ gulp.task('js:build', function () {
 //libs
 gulp.task('libs:build', function() {
     gulp.src([
-            'src/libsSrc/jquery/dist/jquery.min.js',
-            'src/libsSrc/select2/dist/js/select2.min.js'
+            "src/libsSrc/threejs/build/three.min.js",
+            "src/libs/orbitControls.js",
+            'src/libsSrc/jquery/dist/jquery.min.js'
         ])
         .pipe(plumber())
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js

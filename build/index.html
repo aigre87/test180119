@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>test</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async></script>
-	<script>
+<!-- 	<script>
 	var WebFontConfig = {
 		google: { families: ['Roboto:300,400,500,700'] },
 		custom: {
@@ -14,94 +14,13 @@
 		},
 		active: function() {}
 	};
-	</script>
+	</script> -->
 	<link rel="stylesheet" href="css/template_styles.min.css?v1">
-	<script src="libs/libs.min.js"></script>
-	<script src="js/main.min.js?v1"></script>
+
 </head>
 <body class="test">
-    <div class="mainWrapper">
-        <header>
-            <div class="leftButtons">
-                <div class="burgerMenu">
-                    <div class="button">
-    
-                    </div>
-                </div>
-            </div>
-            <div class="title">
-                <span>Пользователи(5)</span>
-            </div>
-            <div class="rightButtons">
-                <div class="button fullScreen">
-
-                </div>
-                <div class="button info">
-                    
-                </div>
-            </div>
-        </header>
-        <div class="content">
-            <div id="usersGrid">
-                <div class="header row">
-                        <div class="col colCheckbox">
-                            <div class="btn exp">
-                                <div class="plus"></div>
-                            </div>
-                        </div>
-                        <div class="col colId">
-                            Пользователь ID
-                        </div>
-                        <div class="col colMail">
-                            Электронная почта
-                        </div>
-                        <div class="col colRole">
-                            Роль
-                        </div>
-                        <div class="col colRoom">
-                            Комнаты
-                        </div>
-                </div>
-                <div class="items">
-                    <div class="item row">
-                        <div class="col colCheckbox">
-                            <input type="checkbox" name="" id="">
-                            <div class="checkedItemBorder"></div>
-                        </div>
-                        <div class="col colId">
-                            000000
-                        </div>
-                        <div class="col colMail">
-                            <input type="text" placeholder="email" name="" id="">
-                        </div>
-                        <div class="col colRole">
-                            <select data-placeholder="Не выбрано" name="a1" id="a1">
-                                <option value="Администратор">Администратор</option>
-                                <option value="Модератор">Модератор</option>
-                            </select>
-                        </div>
-                        <div class="col colRoom">
-                            <select data-placeholder="Не выбрано" multiple="multiple" name="a2" id="a2">
-                                <option value="Название комнаты A">Название комнаты A</option>
-                                <option value="Название комнаты B">Название комнаты B</option>
-                                <option value="Название комнаты C">Название комнаты C</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <div class="button">
-                Удалить
-            </div>
-            <div class="button">
-                Сохранить
-            </div>
-            <div class="button">
-                Отменить
-            </div>
-        </footer>
-    </div>
+    <div id="canvasWrapper"></div>
 </body>
+    <script src="libs/libs.min.js"></script>
+    <script src="js/main.min.js?v1"></script>
 </html>
