@@ -28,7 +28,7 @@ var path = {
     build: {
         js:            'build/js/',
         styles:        'build/css/',
-        images:        'build/images/',≠–
+        images:        'build/images/',
         fonts:         'build/fonts/',
         libs:          'build/libs/',
         html:          'build/index.html'
@@ -75,7 +75,10 @@ gulp.task('js:build', function () {
 //libs
 gulp.task('libs:build', function() {
     gulp.src([
+            "src/libsSrc/threejs/examples/js/libs/stats.min.js",
+            "src/libsSrc/threejs/examples/js/WebGL.js",
             "src/libsSrc/threejs/build/three.min.js",
+            "src/libsSrc/threejs/examples/js/renderers/Projector.js",
             "src/libs/orbitControls.js",
             'src/libsSrc/jquery/dist/jquery.min.js'
         ])
@@ -212,6 +215,7 @@ gulp.task('build', [
 ], function(){
     browserSync.init({
         server: "./build",
+        port: 3001,
         ghostMode: false
     });
 });

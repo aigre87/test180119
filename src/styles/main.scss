@@ -1,13 +1,14 @@
 @import "other/mixins";
 html, body{
     height: 100%;
-    background: #c7c7c7;
+    background: #000;
 }
 #canvasWrapper{
     width: 100%;
     height: 100%;
     display: block;
     background: transparent;
+    overflow: hidden;
     canvas{
         background: transparent;
     }
